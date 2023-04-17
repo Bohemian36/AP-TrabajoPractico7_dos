@@ -12,7 +12,7 @@ import java.io.IOException;
           Carrito z = new Carrito(c1,9032);
 		
 	       ItemCarrito [] item = new ItemCarrito[3];
-		                  item[0] = new ItemCarrito(z,uno,2);
+		   item[0] = new ItemCarrito(z,uno,2);
                    item[1] = new ItemCarrito(z,dos,2);
                    item[2] = new ItemCarrito(z,tres,1);		
 		       mostrarCompra(item,z,c1);
@@ -24,17 +24,16 @@ import java.io.IOException;
 	         for (ItemCarrito  items : cargaItem) {
 	             items.mostrarItem();
 	             z.sumarMonto(items);			
-	         }
-	           System.out.println(" ");
-            System.out.println("Total: $"+z.MontoTotal());
+	  }
+	       System.out.println(" ");
+               System.out.println("Total: $"+z.MontoTotal());
             
-           double montoFijo = 2500;
-            double x = ((z.MontoTotal() * 50)/100);
-            if(z.MontoTotal() >= montoFijo) {
-                System.out.println("Total con descuento del 50% es: $"+x);
-            }else
-           System.out.println("Sin descuento");
-	           System.out.println("\nGracias vuelva pronto");
+                  double montoFijo = 2500;
+                  double x = ((z.MontoTotal() * 50)/100);
+               if(z.MontoTotal() >= montoFijo) {
+                  System.out.println("Total con descuento del 50% es: $"+x);
+              }else
+                  System.out.println("Sin descuento");
+	          System.out.println("\nGracias vuelva pronto");
    }
  }
-   
